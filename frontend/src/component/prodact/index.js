@@ -1,9 +1,11 @@
 import React from 'react'
 
-const index=()=> {
-
+const Prodact=()=> {
+  
   return (
-    <div>index</div>
+    <div>
+      <p>hello</p>
+    </div>
   )
 }
-export default index
+export default Prodact
