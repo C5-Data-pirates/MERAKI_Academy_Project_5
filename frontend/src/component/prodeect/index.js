@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Prodect = () => {
     const state = useSelector((state) => {
         return {
-          articles: state.articles.articles,
-          token:state.auth.token 
+        
         };
       });
 
@@ -17,10 +16,10 @@ const Prodect = () => {
 
 
 
-      
+  
   return( 
   <div>
-
+<p>hello</p>
 
   </div>
   )
