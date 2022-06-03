@@ -1,6 +1,11 @@
 const connection = require("../models/db");
 
 // create function to create sub_category
+
+// const getsubCategory=()=>{
+//   const id = 
+// }
+
 const createNewSubCategory = (req, res) => {
   const { sub_category, picUrl } = req.body;
 

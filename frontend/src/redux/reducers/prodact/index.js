@@ -5,7 +5,7 @@ export const productSlice=createSlice({
         product:[]
     },
     reducers:{
-        getproduct:(state,action)=>{
+        productby_id:(state,action)=>{
             state.product=action.payload
         }
     }
@@ -13,6 +13,6 @@ export const productSlice=createSlice({
 
 
 
-export const { getproduct } = productSlice.actions;
+export const { productby_id } = productSlice.actions;
 
 export default productSlice.reducer;

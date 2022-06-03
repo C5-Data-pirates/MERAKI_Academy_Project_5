@@ -7,7 +7,7 @@ export default configureStore({
   reducer: {
     auth: authSlice,
     catogre: catorgeSlice,
-    product: productSlice,
+    productby: productSlice,
     cart: cartSlice,
   },
 });
