@@ -15,25 +15,6 @@ import header6 from "./img/6.png";
 const Homepage = () => {
 
 
-let x= [        <div>
-  {/* this one for power by asusu just add number 1 to params */}
-  <Slide {...properties} className="test">
-    {filterdSubCatag(2).map((element) => {
-      return (
-        <div>
-          <div className="each-slide">
-            <img className="firstpageimg" src={element.picUrlProd} />
-            <p>{element.title}</p>
-          </div>
-        </div>
-      );
-    })}
-  </Slide>
-</div>]
-
-
-
-
 
   const [Pagination, setPagination] = useState("");
   const dispatch = useDispatch();
