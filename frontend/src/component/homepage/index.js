@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
@@ -13,6 +13,28 @@ import header4 from "./img/4.png";
 import header5 from "./img/5.png";
 import header6 from "./img/6.png";
 const Homepage = () => {
+
+
+let x= [        <div>
+  {/* this one for power by asusu just add number 1 to params */}
+  <Slide {...properties} className="test">
+    {filterdSubCatag(2).map((element) => {
+      return (
+        <div>
+          <div className="each-slide">
+            <img className="firstpageimg" src={element.picUrlProd} />
+            <p>{element.title}</p>
+          </div>
+        </div>
+      );
+    })}
+  </Slide>
+</div>]
+
+
+
+
+
   const [Pagination, setPagination] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -166,7 +188,7 @@ const Homepage = () => {
             Pagination.map((element) => {
               console.log(element);
               return (
-                <div>
+                <div> <Link to={`/category/product/${element.product_id}`}>
                   <p>{element.title}</p>
                   <img className="firstpageimg" src={element.picUrlProd} />
                   <p>
@@ -177,6 +199,7 @@ const Homepage = () => {
                       .join(" ")}{" "}
                   </p>
                   <p>{element.price}</p>
+                  </Link>
                 </div>
               );
             })}
@@ -200,8 +223,12 @@ const Homepage = () => {
             </div>
           );
         })}
+
+
     </div>
   );
 };
 
 export default Homepage;
+
+
