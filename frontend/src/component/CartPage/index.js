@@ -90,6 +90,7 @@ setMessage("Your order has been accepted")
     })
 }
 let amount =0
+
   return <>
 
   <table>
@@ -146,12 +147,12 @@ let amount =0
               </tr>
             );
           })}
-        <tr>
+        <tr className="totalPriceRow">
           <td></td>
           <td></td>
           <td></td>
-          <td>Total Price</td>
-          <td>{amount} JD</td>
+          <td className="tdtotalprice">Total Price</td>
+          <td className="tdtotalprice">{amount} JD</td>
         </tr>
         
 
@@ -166,8 +167,13 @@ let amount =0
         Check Out
       </button>
     </>
-  
-};
+
+
+
+      };
+
+
+
 
 
 
