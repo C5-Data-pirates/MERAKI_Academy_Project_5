@@ -18,6 +18,19 @@ export const productSlice = createSlice({
     getProductBysubCategoryAction: (state, action) => {
       state.subCatgoryProduct = action.payload;
     },
+
+        // payload => sub_catgoryId
+      getProductBysubCategoryAction:(state,action)=>{
+            state.subCatgoryProduct=action.payload
+          },
+      
+      
+
+
+
+
+
+
     getnumber: (state, action) => {
       state.number = [];
       let counter = state.product.length / 12;
@@ -37,6 +50,7 @@ export const productSlice = createSlice({
           console.log(index + 1);
           state.number.push(index + 1);
         }
+
 
   
 }});
