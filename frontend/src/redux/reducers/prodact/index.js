@@ -18,15 +18,14 @@ export const productSlice = createSlice({
         // payload => sub_catgoryId
       getProductBysubCategoryAction:(state,action)=>{
             state.subCatgoryProduct=action.payload
-        }
-  
-});
+          }
+        },
+      });
+      
 
 export const { getproduct, setPagination,getProductBysubCategoryAction } = productSlice.actions;
 
-    
-        
-       
+
 
 
 

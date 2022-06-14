@@ -166,8 +166,7 @@ let amount =0
         Check Out
       </button>
     </>
-
-  );
+  
 };
 
 
