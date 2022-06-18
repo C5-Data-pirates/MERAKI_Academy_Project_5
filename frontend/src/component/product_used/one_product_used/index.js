@@ -1,11 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { useEffect } from "react";
+import {IoIosCheckmarkCircle} from "react-icons/io";
 import { setOneproductused } from "../../../redux/reducers/prduct_used";
 import { useParams } from "react-router-dom";
 import "./style.css";
 const ONEPRODUCTUSED = () => {
+  const [mesage, setMesage] = useState("")
+  const [clasName,setClassName]=useState("")
   const id = useParams();
   const dispacth = useDispatch();
   const state = useSelector((state) => {
@@ -40,6 +43,12 @@ const ONEPRODUCTUSED = () => {
       })
       .then((result) => {
         console.log(result);
+        setMesage("Your Item has been added" )
+        setClassName("active")
+        setTimeout(()=>{
+          setMesage("")
+          setClassName("")
+        },3000)
       })
       .catch((err) => {
         console.log(err);
@@ -76,13 +85,14 @@ const ONEPRODUCTUSED = () => {
                     <button
                       className="addtocart"
                       onClick={() => {
-                        console.log(false);
+                        
                         add(element.used_product_id);
                         
                       }}
                     >
                       Add to cart
                     </button>
+                    <p className="message_cart_add" ><span className={`icon_check ${clasName}`}><IoIosCheckmarkCircle/> </span> {mesage}</p>
                   </div>
                 </div>
               </div>

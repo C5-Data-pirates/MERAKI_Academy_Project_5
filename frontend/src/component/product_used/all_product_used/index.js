@@ -76,19 +76,19 @@ useEffect(()=>{
                         return(
                         <div className="one_product_used">
                         <Link
-                          to={`/one_product_used/${element.used_product_id}`}
-                          key={index}
-                          className="link_Product_used"
-                        >
-                          <img className="product_used_Img" src={element.url_imj}></img>
-                          <p className="titlePar_product_used"> {element.product_name}</p>
-                          <p className="descriptionPar_used">
-                            {" "}
-                            {element.product_description}
-                          </p>
-      
-                          <p className="price_product_used"> {element.asking_price +20 } JD</p>
-                        </Link>
+                    to={`/category/product/${element.used_product_id}`}
+                    key={index}
+                    className="linkProduct"
+                  >
+                    <img className="productImg" src={element.url_imj}></img>
+                    <p className="titlePar"> {element.product_name}</p>
+                    <p className="descriptionPar">
+                      {" "}
+                      {element.product_description.split(" ").slice(0,15)}...
+                    </p>
+
+                    <p className="pricePar"> {element.asking_price +20 } JD</p>
+                  </Link>
                       </div>
                         )
                     })
